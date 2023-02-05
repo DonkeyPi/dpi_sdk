@@ -6,7 +6,7 @@
 - Install [Vagrant 2.3.4](https://releases.hashicorp.com/vagrant/2.3.4/) (Windows, Linux, and OSX amd64 only)
 - Install [Visual Studio Code with Remote - SSH Extension](https://code.visualstudio.com/docs/remote/ssh)
 ```bash
-git clone https://github.com/DonkeyPi/dpi_sdk --branch v0.0.1
+git clone https://github.com/DonkeyPi/dpi_sdk
 cd dpi_sdk
 vagrant up
 vagrant ssh-config
