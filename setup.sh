@@ -13,7 +13,7 @@ touch ~/.bashrc
 
 #install asdf
 sudo apk add git
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.1
+[ -d ~/.asdf ] || git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.11.1
 echo ". ~/.asdf/asdf.sh" >> ~/.bash_profile
 . ~/.asdf/asdf.sh
 
@@ -65,14 +65,14 @@ mix dpi.select
 
 cd ~
 
-mix dpi.keygen
+[ -f ~/.ssh/id_rsa ] || mix dpi.keygen
 cp ~/release/config.ssh ~/.ssh/config
 cat ~/release/id_rsa.key > ~/.ssh/id_rsa
 cat ~/release/id_rsa.pub > ~/.ssh/id_rsa.pub
 
 #https://github.com/raspberrypi/usbboot
 sudo apk add git libusb-dev
-git clone --depth=1 https://github.com/raspberrypi/usbboot
+[ -d ~/usbboot ] || git clone --depth=1 https://github.com/raspberrypi/usbboot
 (cd usbboot && make)
 #~/usbboot/rpiboot
 

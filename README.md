@@ -21,14 +21,9 @@ vagrant ssh-config
 ```bash
 ~/release/burn.sh rpi4 #or rpi3
 ```
-- Update `~/.dpi_mix.exs` host:
-    - Get the IP by pressing `[F6] Show Info` at the `Network Manager` screen.
-    - Get the ID from the `About` screen and use it as hostname with suffix `.local`
-    - Because of NAT networking, register the host in file `/etc/hosts` with:
-```bash
-echo "10.77.4.55 dpi-7d032302.local" | sudo tee -a /etc/hosts
-ping dpi-7d032302.local #should work
-```
+- Update `~/.dpi_mix.exs` host and bid:
+    - Get the IP by pressing `[F6] Show Info` at the `Network Manager` screen and use it as host
+    - Get the BID from the `About` screen
 - Deploy the `hello_world` template with:
 ```bash
 cd ~/release/dpi_sdk/hello_world
