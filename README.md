@@ -11,18 +11,24 @@ cd dpi_sdk
 vagrant up
 vagrant ssh-config
 ```
-- Use `vagrant ssh-config` output to setup a host in your `~/.ssh/config` file.
+- Use `vagrant ssh-config` output to setup a host in your `~/.ssh/config` file
 - Connect to the ssh host from VSCode Remote SSH plugin
 - Setup the `VSCode ElixirLS` plugin on the host
-- Boot the Raspberry eMMC using the [usbboot](https://github.com/raspberrypi/usbboot) tool
+- Boot the Raspberry Pi eMMC using the [usbboot](https://github.com/raspberrypi/usbboot) tool
     - [Windows](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) may need to install drivers from Windows Update
 - Attach your USB storage device using the VirtualBox UI
 - Burn an image with either:
 ```bash
 ~/release/burn.sh rpi4 #or rpi3
 ```
-- Update `~/.dpi_mix.exs` with your raspberry pi IP
-    - You can get the IP by pressing `[F6] Show Info` at the `Network Manager` screen.
+- Update `~/.dpi_mix.exs` host:
+    - Get the IP by pressing `[F6] Show Info` at the `Network Manager` screen.
+    - Get the ID from the `About` screen and use it as hostname with suffix `.local`
+    - Because of NAT networking, register the host in file `/etc/hosts` with:
+```bash
+echo "10.77.4.55 dpi-7d032302.local" | sudo tee -a /etc/hosts
+ping dpi-7d032302.local #should work
+```
 - Deploy the `hello_world` template with:
 ```bash
 cd ~/release/dpi_sdk/hello_world
