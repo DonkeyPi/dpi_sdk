@@ -14,8 +14,6 @@ vagrant ssh-config
 - Use `vagrant ssh-config` output to setup a host in your `~/.ssh/config` file
 - Connect to the ssh host from VSCode Remote SSH plugin
 - Setup the `VSCode ElixirLS` plugin on the host
-- Boot the Raspberry Pi eMMC using the [usbboot](https://github.com/raspberrypi/usbboot) tool
-    - [Windows](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe) may need to install drivers from Windows Update
 - Attach your USB storage device using the VirtualBox UI
 - Burn an image with either:
 ```bash
