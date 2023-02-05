@@ -56,12 +56,10 @@ sudo apk add nano
 
 cd ~
 
+#no host development for initial release
 if [ ! -f ~/.dpi_mix.exs ]; then
     cp ~/release/dpi_mix.exs ~/.dpi_mix.exs
-    hostname=`hostname`
-    sed -i "s/hostname/$hostname/g" ~/.dpi_mix.exs
 fi
-mix dpi.select
 
 cd ~
 
