@@ -13,15 +13,15 @@ vagrant ssh-config
 ```
 - Use `vagrant ssh-config` output to setup a host in your `~/.ssh/config` file
 - Connect to the ssh host from VSCode Remote SSH plugin
-- Setup the `VSCode ElixirLS` plugin on the host
+- Setup the `VSCode ElixirLS` plugin on the ssh host
 - Attach your USB storage device using the VirtualBox UI
 - Burn an image with either:
 ```bash
 ~/release/burn.sh rpi4 #or rpi3
 ```
 - Update `~/.dpi_mix.exs` host and bid:
-    - Get the IP by pressing `[F6] Show Info` at the `Network Manager` screen and use it as host
-    - Get the BID from the `About` screen
+    - Get the IP by pressing `[F6] Show Info` at the `Network Manager` screen and use it as `host`
+    - Get the BID from the `About` screen and use it as `bid`
 - Deploy the `hello_world` template with:
 ```bash
 cd ~/release/dpi_sdk/hello_world
