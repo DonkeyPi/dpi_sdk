@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo 'Welcome to DonkeyPi SDK!' > /etc/motd
 echo 'https://github.com/DonkeyPi' >> /etc/motd
