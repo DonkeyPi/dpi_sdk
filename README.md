@@ -38,7 +38,7 @@ Select device to attach: 2
 ```bash
 dpi-sdk:~$ ~/release/burn.sh rpi4 #or rpi3
 ...
-==> dpi_firmware
++ sudo fwup -a -t complete -i /home/vagrant/release/dpi_firmware-rpi4.fw
 Use 29.76 GiB memory card found at /dev/sdb? [Yn]
 100% [====================================] 42.92 MB in / 53.45 MB out       
 Success!
@@ -61,7 +61,6 @@ dpi-sdk:~$ cat ~/.dpi_mix.exs
 dpi-sdk:~$ cd ~/release/dpi_sdk/hello_world
 dpi-sdk:~$ mix dpi.select rpi4 #or rpi3
 dpi-sdk:~$ mix dpi deps.get
-dpi-sdk:~$ mix dpi.sign
 dpi-sdk:~$ mix dpi.install
 Generated hello_world app
 ...
