@@ -1,13 +1,6 @@
 #!/bin/bash -xe
 
-cd ~
-
-#select from outside dpi_firmware
+cd ~/release/dpi_sdk/hello_world
 mix dpi.select rpi4
-
-cd ~/release/dpi_firmware
-
 mix dpi deps.get
 mix dpi compile
-
-cd ~
